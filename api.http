@@ -1,0 +1,29 @@
+### recuperar todas las peliculas
+GET http://localhost:3000/movies
+
+### recuperar una pelicula
+GET http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+
+### recurperar todas las peliculas de un genero
+GET http://localhost:3000/movies?genre=Fantasy
+
+### crear una pelicula
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+    "title": "The Lord of the Rings: The Fellowship of the Ring",
+    "year": 2001,
+    "director": "Peter Jackson",
+    "duration": 178,
+    "poster": "https://images-na.ssl-images-amazon.com/images/I/51Qvs9i%2BdNL._SY445_.jpg",
+    "genre": ["Fantasy"]
+}
+
+### actualizar una pelicula
+PATCH http://localhost:3000/movies/6a360a18-c645-4b47-9a7b-2a71babbf3e0
+Content-Type: application/json
+
+{
+    "title": "Holis"
+}
